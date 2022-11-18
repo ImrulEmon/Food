@@ -17,7 +17,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ToDo App',
       theme: ThemeData(
+        fontFamily: 'Gilroy',
+        scaffoldBackgroundColor: fdBGColor,
         primarySwatch: Colors.blue,
+        textTheme: TextTheme(
+          headlineMedium: TextStyle(fontWeight: FontWeight.bold),
+          titleMedium: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       home: Home(),
     );
