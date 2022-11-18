@@ -56,6 +56,7 @@ class _CardDetailState extends State<CardDetail> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
