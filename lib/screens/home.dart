@@ -43,55 +43,73 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Text(
-                'Enjoy your favourite food delicious',
-                style: TextStyle(
-                  fontFamily: 'Gilroy',
-                  fontSize: 28.0,
-                  fontWeight: FontWeight.w900,
-                  height: 2.0,
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'Enjoy your favourite food delicious',
+                  style: TextStyle(
+                    fontFamily: 'Gilroy',
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.w900,
+                    height: 2.0,
+                  ),
                 ),
               ),
             ),
-          ),
-          SearchInput(),
-          SizedBox(
-            height: 60.0,
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: <Widget>[
-                CategoryTitle(
-                  title: "All",
-                ),
-                CategoryTitle(title: "Healthy food", active: true),
-                CategoryTitle(title: "Junk food"),
-                CategoryTitle(title: "Dessert"),
-                CategoryTitle(title: "Indian"),
-              ],
+            SearchInput(),
+            SizedBox(
+              height: 60.0,
             ),
-          ),
-          SizedBox(
-            height: 60.0,
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                FoodCard(),
-                FoodCard(),
-                FoodCard(),
-                FoodCard(),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: <Widget>[
+                  CategoryTitle(
+                    title: "All",
+                  ),
+                  CategoryTitle(title: "Healthy food", active: true),
+                  CategoryTitle(title: "Junk food"),
+                  CategoryTitle(title: "Dessert"),
+                  CategoryTitle(title: "Indian"),
+                ],
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 60.0,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  FoodCard(
+                    title: 'Eybisi Salad Mix',
+                    subtitle: 'Mix vegetables inggridients',
+                    price: 14.99,
+                  ),
+                  FoodCard(
+                    title: 'Easy Grek Salad',
+                    subtitle: 'Loves and Lemon',
+                    price: 21.99,
+                  ),
+                  FoodCard(
+                    title: 'Eybisi Salad Mix',
+                    subtitle: 'Mix vegetables inggridients',
+                    price: 14.99,
+                  ),
+                  FoodCard(
+                    title: 'Easy Grek Salad',
+                    subtitle: 'Loves and Lemon',
+                    price: 21.99,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: Container(
         margin: EdgeInsets.only(
