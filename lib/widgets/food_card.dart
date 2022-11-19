@@ -4,9 +4,10 @@ import 'package:food/screens/card_details.dart';
 class FoodCard extends StatefulWidget {
   final String title;
   final String subtitle;
+  final String image;
   final double price;
 
-  const FoodCard({Key key, this.title, this.subtitle, this.price})
+  const FoodCard({Key key, this.title, this.subtitle, this.image, this.price})
       : super(key: key);
 
   @override
@@ -23,6 +24,8 @@ class _FoodCardState extends State<FoodCard> {
           MaterialPageRoute(
             builder: (context) => CardDetail(
               titled: widget.title,
+              priced: widget.price,
+              imaged: widget.image,
             ),
           ),
         );
@@ -63,7 +66,7 @@ class _FoodCardState extends State<FoodCard> {
                 child: Container(
                   alignment: Alignment.center,
                   child: Image.asset(
-                    'assets/images/Eybisi.png',
+                    widget.image,
                     // height: 150,
 
                     fit: BoxFit.cover,

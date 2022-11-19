@@ -4,14 +4,23 @@ import '../constants/colors.dart';
 class CardDetail extends StatefulWidget {
   final String titled;
   final String subtitled;
+  final String imaged;
   final double priced;
-  const CardDetail({this.titled, this.subtitled, this.priced});
+  const CardDetail({this.titled, this.subtitled, this.imaged, this.priced});
 
   @override
-  State<CardDetail> createState() => _CardDetailState();
+  State<CardDetail> createState() =>
+      _CardDetailState(titled, subtitled, imaged, priced);
 }
 
 class _CardDetailState extends State<CardDetail> {
+  final String titled;
+  final String subtitled;
+  final String imaged;
+  final double priced;
+
+  _CardDetailState(this.titled, this.subtitled, this.imaged, this.priced);
+
   int quantity = 1;
 
   void _addQuantity() {
@@ -68,7 +77,7 @@ class _CardDetailState extends State<CardDetail> {
                         height: 40.0,
                       ),
                       Text(
-                        'Easy Greak Salad',
+                        '$titled',
                         style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
@@ -87,7 +96,7 @@ class _CardDetailState extends State<CardDetail> {
                         height: 5.0,
                       ),
                       Text(
-                        '\$21.99',
+                        '\$$priced',
                         style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
@@ -125,7 +134,7 @@ class _CardDetailState extends State<CardDetail> {
                   Expanded(
                     child: Container(
                       width: double.infinity,
-                      child: Image.asset('assets/images/Eybisi.png'),
+                      child: Image.asset(imaged),
                     ),
                   )
                 ],
