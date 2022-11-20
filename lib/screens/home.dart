@@ -149,6 +149,8 @@ class Home extends StatelessWidget {
             fixedColor: Colors.white,
             unselectedItemColor: Colors.white,
             unselectedFontSize: 14,
+            // showSelectedLabels: false,
+            // showUnselectedLabels: false,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(
